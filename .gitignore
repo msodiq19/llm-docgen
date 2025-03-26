@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+poetry.lock
+
+# IDE
+.vscode/
+.idea/
+
+# Build/dist
+dist/
+build/
+*.egg-info/
+
+# Tests
+.coverage
+htmlcov/
