@@ -1,0 +1,16 @@
+{# templates/api.md.j2 #}
+{% extends "base.md.j2" %}
+
+{% block content %}
+## API Reference
+
+{% for cls in classes %}
+### Class {{ cls.name }}
+{{ cls.docstring }}
+
+**Methods**:
+{% for method in cls.methods %}
+- `{{ method.name }}`: {{ method.docstring }}
+{% endfor %}
+{% endfor %}
+{% endblock %}

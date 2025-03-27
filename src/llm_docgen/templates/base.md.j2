@@ -1,0 +1,13 @@
+{# templates/base.md.j2 #}
+# {{ project_name }} Documentation
+
+{% block content %}{% endblock %}
+
+{% if examples %}
+## Usage Examples
+{% for ex in examples %}
+### {{ ex.description }}
+```python
+{{ ex.code }}
+{% endfor %}
+{% endif %}
