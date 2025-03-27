@@ -1,4 +1,4 @@
-from src.llm_docgen.parsers.python_parser import parse_python_code
+from llm_docgen.parsers.python_parser import parse_python_code
 
 code = """\
 def add(a: int, b: int) -> int:
