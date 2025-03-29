@@ -28,8 +28,17 @@ class CodeAnalyzer(ast.NodeVisitor):
         self.generic_visit(node)
     
     def visit_ClassDef(self, node: ast.ClassDef):
+        methods = []
+        for item in node.body:
+            if isinstance(item, ast.FunctionDef):
+                methods.append({
+                    "name": item.name,
+                    "docstring": ast.get_docstring(item) or ""
+                })
         self.classes.append({
             "name": node.name,
+            "docstring": ast.get_docstring(node) or "",
+            "methods": methods,
             "lineno": node.lineno
         })
         self.generic_visit(node)

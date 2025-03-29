@@ -11,6 +11,7 @@ click = "^8.1.7"
 Jinja2 = "^3.1.2"
 pyyaml = "^6.0.1"
 nbconvert = "^7.10.0"
+GitPython = "^3.1.30"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
@@ -19,7 +20,7 @@ black = "^23.12.0"
 pytest-cov = "^6.0.0"
 
 [tool.poetry.scripts]
-llm-docgen = "src.cli:main"
+llm-docgen = "src.llm_docgen.cli.commands:cli"
 
 [build-system]
 requires = ["poetry-core"]
